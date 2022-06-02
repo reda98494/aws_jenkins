@@ -4,4 +4,4 @@ yum install -y httpd git
 systemctl enable --now httpd 
 
 cd /var/www/
-git clone <##GIT_URL##>
+git clone $1
