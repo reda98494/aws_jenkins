@@ -4,8 +4,9 @@ resource "aws_instance" "JENKINS-GPCHOC-ADM" {
         security_groups = ["sg-02ebf81c9fd2d0b68"]
         subnet_id = "subnet-0c59a465aaea21d4a"
         instance_type = "t2.micro"
-        associate_public_ip_address = "true"
+       
         user_data = "${file("user_data.sh")}"
+        
         tags = {
                 Name = "JENKINS-GPCHOC-ADM"
         }
