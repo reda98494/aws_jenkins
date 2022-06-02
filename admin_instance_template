@@ -1,4 +1,4 @@
-resource "aws_instance" "JENKINS-GPCHOC-ADM" {
+resource "aws_instance" "JENKINS_GPCHOC_ADM" {
         key_name = "test_keypair"
         ami = "ami-021d41cbdefc0c994"
         security_groups = ["sg-02ebf81c9fd2d0b68"]
@@ -8,6 +8,6 @@ resource "aws_instance" "JENKINS-GPCHOC-ADM" {
         user_data = "${file("user_data.sh")}"
         
         tags = {
-                Name = "JENKINS-GPCHOC-ADM"
+                Name = "JENKINS_GPCHOC_ADM"
         }
 }
