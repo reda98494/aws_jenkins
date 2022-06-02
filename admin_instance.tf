@@ -1,4 +1,4 @@
-resource "aws_instance" "JENKINS-instance-adm" {
+resource "aws_instance" "JENKINS-<##INSTANCE_NUMBER##>-adm" {
         key_name = "test_keypair"
         ami = "ami-021d41cbdefc0c994"
         security_groups = ["sg-092271493b7c6d49a"]
@@ -7,6 +7,6 @@ resource "aws_instance" "JENKINS-instance-adm" {
         associate_public_ip_address = "true"
         user_data = "${file("<##USER_DATA##>")}"
         tags = {
-                Name = "admin_machine_reda"
+                Name = "JENKINS-<##INSTANCE_NUMBER##>-adm"
         }
 }
